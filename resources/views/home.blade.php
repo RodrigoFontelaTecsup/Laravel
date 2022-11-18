@@ -18,9 +18,14 @@
         }
     </style>
 
-
     <div class="album py-5 bg-light">
         <div class="container">
+            @if(Session::get('registrado'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Perfecto!</strong> {{ Session::get('registrado') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 @foreach($fotos as $foto)
                 <div class="col">

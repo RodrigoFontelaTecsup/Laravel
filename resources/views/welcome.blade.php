@@ -95,17 +95,17 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="mb-auto">
       <div>
-        <h3 class="float-md-start mb-0">Galeria</h3>
+        <h3 class="float-md-start mb-0">Biblioteca Virtual</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
 
           @if (Route::has('login'))
             @auth
             <a href="{{ url('/home') }}" class="nav-link active"  href="#">Home</a>
             @else
-            <a href="{{ route('login') }}" class="nav-link" href="#">Log in</a>
+            <a href="{{ route('login') }}" class="nav-link" href="#">Ingresar</a>
 
             @if (Route::has('register'))
-            <a  href="{{ route('register') }}" class="nav-link" href="#">Register</a>
+            <a  href="{{ route('register') }}" class="nav-link" href="#">Registrarse</a>
             @endif
             @endauth
           @endif
@@ -114,20 +114,25 @@
     </header>
 
     <main class="px-3">
-      <h1>Galeria de Fotos.</h1>
-      <p class="lead">Esta es mi galeria de fotos para ingresar presiona Login y si eres un usuario nuevo presiona Register.</p>
-      <p class="lead">
-        Bienvenido
-      </p>
+      <h1>Bienvenido a nuestra biblioteca virtual!</h1>
+      <p class="lead">El aprendizaje ha evolucionado y demanda soluciones 100% digitales. Con nues Biblioteca Virtual, prepara a tu institución para afrontar este reto.</p>
+
     </main>
 
     <footer class="mt-auto text-white-50">
-      <p>Galeria de Fotos <a href="https://getbootstrap.com/" class="text-white">Laravel</a>, by <a href="https://twitter.com/mdo" class="text-white">@TECSUP</a>.</p>
+      <p>Biblioteca virtual <a href="https://getbootstrap.com/" class="text-white">Laravel</a>, by <a href="https://twitter.com/mdo" class="text-white">@TECSUP</a>.</p>
     </footer>
   </div>
 
+  <script src="{{asset('js/app.js')}}"></script>
 
-
+    <script>
+      Swal.fire(
+        'The Internet?',
+        'That thing is still around?',
+        'question'
+      )
+    </script>
 </body>
 
 </html>

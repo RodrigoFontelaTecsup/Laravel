@@ -27,6 +27,7 @@ class HomeController extends Controller
         $fotos = Foto::with('User')
             ->with('Comentario.User')
             ->get();
+        session()->flash('registrado','se registro correctamente');
         return view('home', compact('fotos'));
     }
 }

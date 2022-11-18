@@ -38,6 +38,7 @@ class FotoController extends Controller
             $foto->estado = 1;
             $foto->ruta = $fileName;
             $foto->save();
+            session()->flash('exito','foto subida correctamente');
             return redirect('/fotos');
         }
     }

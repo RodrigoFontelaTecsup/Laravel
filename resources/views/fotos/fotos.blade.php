@@ -19,6 +19,12 @@
     </style>
     <div class="album py-5 bg-light">
         <div class="container">
+            @if($flash = Session::get('exito'))
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <strong>Perfecto!</strong> {{ $flash }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
             <form action="{{ route('subirFoto') }}" method="POST" enctype="multipart/form-data" class="row g-3">
                 @csrf
                 <label for="staticEmail2">Subir Una foto</label>
